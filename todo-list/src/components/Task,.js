@@ -1,7 +1,22 @@
 import React from "react";
 
 function Task(props) {
-    return <li>{props.name}</li>;
+    function handleClick() {
+        const { name, handleCallback } = props;
+
+        if (handleCallback) {
+            handleCallback(name);
+        }
+    }
+
+    return (
+        <li
+            onClick={handleClick}
+            style={props.isCompleted ? { color: "green" } : { color: "black" }}
+        >
+            {props.name}
+        </li>
+    );
 }
 
 export default Task;
