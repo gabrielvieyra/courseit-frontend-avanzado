@@ -4,10 +4,10 @@ function Product(props) {
     const { title, image } = props;
 
     return (
-        <>
+        <div>
             <img src={image} alt="" />
             <p>{title}</p>
-        </>
+        </div>
     );
 }
 

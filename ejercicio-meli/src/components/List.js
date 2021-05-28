@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Product from "./Product";
 
-function List() {
+function List(props) {
+    const { inputValue } = props;
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
@@ -10,7 +11,7 @@ function List() {
 
     async function fetchData() {
         const getData = await fetch(
-            "https://api.mercadolibre.com/sites/MLA/search?q=auriculares&limit=5"
+            "https://api.mercadolibre.com/sites/MLA/search?q=auriculares&limit=50"
         );
         const getJson = await getData.json();
 
@@ -20,15 +21,21 @@ function List() {
 
     return (
         <>
-            {products.map((product, key) => {
-                return (
-                    <Product
-                        title={product.title}
-                        image={product.thumbnail}
-                        key={product.id ? product.id : key}
-                    />
-                );
-            })}
+            {products
+                .filter((product) => {
+                    return product.title
+                        .toLowerCase()
+                        .includes(inputValue.toLowerCase());
+                })
+                .map((product, key) => {
+                    return (
+                        <Product
+                            title={product.title}
+                            image={product.thumbnail}
+                            key={product.id ? product.id : key}
+                        />
+                    );
+                })}
         </>
     );
 }
