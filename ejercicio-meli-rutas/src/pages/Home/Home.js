@@ -1,5 +1,6 @@
 import React from "react";
 import "./Home.css";
+import { Link } from "react-router-dom";
 
 function Home() {
     const countries = [
@@ -16,11 +17,13 @@ function Home() {
     return (
         <>
             <div className="logo"></div>
-            <ul>
-                {countries.map((country, key) => {
-                    return <li key={key}>{country}</li>;
-                })}
-            </ul>
+            {countries.map((country, key) => {
+                return (
+                    <Link to="/products" key={key}>
+                        {country}
+                    </Link>
+                );
+            })}
         </>
     );
 }
