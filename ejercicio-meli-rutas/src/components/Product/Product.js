@@ -1,10 +1,12 @@
 import React from "react";
 
-function Product() {
+function Product(props) {
+    const { title, image } = props;
+
     return (
         <>
-            <img src="" alt="" />
-            <p>pepe</p>
+            <img src={image} alt="" />
+            <p>{title}</p>
         </>
     );
 }
