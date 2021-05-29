@@ -1,0 +1,16 @@
+/ -> Home -> Navbar, Footer
+/equipo -> Team -> Navbar, Team, Footer
+
+Pages
+    - Home
+        <Navbar />
+        <Footer />
+    - Team
+        <Navbar />
+        <Team />
+        <Footer />
+
+Components
+    - Navbar
+    - Team
+    - Footer
