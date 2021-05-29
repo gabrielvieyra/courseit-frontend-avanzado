@@ -1,12 +1,26 @@
 import React from "react";
-import Navbar from "../../components/Navbar/Navbar";
-import Footer from "../../components/Footer/Footer";
+import "./Home.css";
 
 function Home() {
+    const countries = [
+        "Argentina",
+        "Bolivia",
+        "Brasil",
+        "Chile",
+        "Colombia",
+        "Costa Rica",
+        "Dominicana",
+        "Ecuador"
+    ];
+
     return (
         <>
-            <Navbar />
-            <Footer />
+            <div className="logo"></div>
+            <ul>
+                {countries.map((country, key) => {
+                    return <li key={key}>{country}</li>;
+                })}
+            </ul>
         </>
     );
 }

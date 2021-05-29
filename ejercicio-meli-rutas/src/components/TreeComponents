@@ -14,3 +14,25 @@ Components
     - Navbar
     - Team
     - Footer
+
+Ejercicio
+
+/ -> Home -> 
+/products -> Products -> Navbar, ProductsData
+
+Pages
+    - Home
+        <Navbar />
+        <Footer />
+    - Products
+        <Navbar />
+        <ProductsData />
+
+Components
+    - Navbar
+        - image
+        - input
+        - text
+    - ProductsData
+        <HeaderOne />
+        <Product />

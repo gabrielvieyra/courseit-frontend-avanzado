@@ -3,7 +3,9 @@ import React from "react";
 function Navbar() {
     return (
         <>
-            <p>Soy el Navbar</p>
+            <p>img</p>
+            <input />
+            <p>Compra hoy y pagá depués</p>
         </>
     );
 }
