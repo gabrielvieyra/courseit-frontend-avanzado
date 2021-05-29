@@ -1,15 +1,17 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import App from "./App";
+
+import Home from "./pages/Home/Home";
+import Team from "./pages/Team/Team";
+
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(
     <Router>
-        <Route path="/">
-            <App />
-        </Route>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/equipo" component={Team} />
     </Router>,
     document.getElementById("root")
 );
