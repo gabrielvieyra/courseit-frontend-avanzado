@@ -7,7 +7,7 @@ function ProductsData(props) {
 
     async function fetchData() {
         const getData = await fetch(
-            "https://api.mercadolibre.com/sites/MLA/search?q=auriculares&limit=20"
+            `https://api.mercadolibre.com/sites/${props.site}/search?q=auriculares&limit=20`
         );
         const getJson = await getData.json();
 

@@ -22,8 +22,6 @@ Ejercicio
 
 Pages
     - Home
-        <Navbar />
-        <Footer />
     - Products
         <Navbar />
         <ProductsData />
@@ -36,3 +34,7 @@ Components
     - ProductsData
         <HeaderOne />
         <Product />
+
+Ejercicio 2
+
+- queremos clickear en un pais y que te lleve a un carousel de productos de ese pais

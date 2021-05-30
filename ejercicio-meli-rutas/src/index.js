@@ -4,6 +4,7 @@ import "./index.css";
 
 import Home from "./pages/Home/Home";
 import Products from "./pages/Products/Products";
+import ProductMeli from "./pages/ProductMeli/ProductMeli";
 
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
@@ -11,7 +12,8 @@ import reportWebVitals from "./reportWebVitals";
 ReactDOM.render(
     <Router>
         <Route exact path="/" component={Home} />
-        <Route exact path="/products" component={Products} />
+        <Route exact path="/producto/:site" component={Products} />
+        <Route exact path="/producto/:id" component={ProductMeli} />
     </Router>,
     document.getElementById("root")
 );
