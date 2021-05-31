@@ -37,13 +37,17 @@ function Home() {
     return (
         <>
             <div className="logo"></div>
-            {countries.map((country, key) => {
-                return (
-                    <Link to={`/producto/${country.site}`} key={key}>
-                        {country.name}
-                    </Link>
-                );
-            })}
+            <ul>
+                {countries.map((country, key) => {
+                    return (
+                        <li key={key}>
+                            <Link to={`/producto/${country.site}`}>
+                                {country.name}
+                            </Link>
+                        </li>
+                    );
+                })}
+            </ul>
         </>
     );
 }

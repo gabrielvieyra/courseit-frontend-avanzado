@@ -13,7 +13,7 @@ ReactDOM.render(
     <Router>
         <Route exact path="/" component={Home} />
         <Route exact path="/producto/:site" component={Products} />
-        <Route exact path="/producto/:id" component={ProductMeli} />
+        {/*<Route exact path="/producto/:id" component={ProductMeli} />*/}
     </Router>,
     document.getElementById("root")
 );
