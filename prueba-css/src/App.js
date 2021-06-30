@@ -1,9 +1,10 @@
-import React from "react";
+import Test from "./components/Test/Test";
+import "./App.scss";
 
 function App() {
     return (
         <>
-            <h1>Hola IT</h1>
+            <Test titleOne="Soy un test" titleTwo="Soy otro test" />
         </>
     );
 }

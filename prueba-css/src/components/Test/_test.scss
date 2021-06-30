@@ -1,0 +1,27 @@
+@import "../../styles/styles";
+
+.card {
+    background-color: $aqua;
+}
+
+.card__headerOne {
+    color: $blue;
+}
+
+.card__text {
+    font-size: 14px;
+}
+
+.button {
+    background-color: $black;
+    padding: 4px;
+}
+
+.button__text {
+    color: $aqua;
+}
+
+.button--change {
+    /* absolute es el modificador que va a modificar el bloque button */
+    background-color: $blue;
+}
