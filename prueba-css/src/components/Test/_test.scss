@@ -2,26 +2,26 @@
 
 .card {
     background-color: $aqua;
-}
 
-.card__headerOne {
-    color: $blue;
-}
+    &__headerOne {
+        color: $blue;
+    }
 
-.card__text {
-    font-size: 14px;
+    &__text {
+        font-size: 14px;
+    }
 }
 
 .button {
     background-color: $black;
     padding: 4px;
-}
 
-.button__text {
-    color: $aqua;
-}
+    &__text {
+        color: $aqua;
+    }
 
-.button--change {
-    /* absolute es el modificador que va a modificar el bloque button */
-    background-color: $blue;
+    &--change {
+        /* absolute es el modificador que va a modificar el bloque button */
+        background-color: $blue;
+    }
 }
