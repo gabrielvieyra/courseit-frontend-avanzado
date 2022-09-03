@@ -1,10 +1,15 @@
 import React from "react";
 
+// Components
+import List from "./components/List/List";
+import Navbar from "./components/Navbar/Navbar";
+
 function App() {
   return (
-    <div>
-      <h1>Probando</h1>
-    </div>
+    <>
+      <Navbar />
+      <List />
+    </>
   );
 }
 
