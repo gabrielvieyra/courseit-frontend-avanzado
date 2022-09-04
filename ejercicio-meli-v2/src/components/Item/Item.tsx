@@ -8,7 +8,7 @@ interface ItemProps {
 }
 
 const Item: React.FC<ItemProps> = ({ item }) => {
-  //   console.log(item);
+  // console.log(item);
   const { thumbnail, title } = item;
 
   return (
