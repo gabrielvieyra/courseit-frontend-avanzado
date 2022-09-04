@@ -12,10 +12,10 @@ const Item: React.FC<ItemProps> = ({ item }) => {
   const { thumbnail, title } = item;
 
   return (
-    <>
+    <div style={{ marginTop: "24px" }}>
       <img src={thumbnail} alt={thumbnail} />
       <p>{title}</p>
-    </>
+    </div>
   );
 };
 
