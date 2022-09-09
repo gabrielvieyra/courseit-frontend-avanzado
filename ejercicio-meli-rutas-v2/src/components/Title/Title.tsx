@@ -1,6 +1,6 @@
 import React from "react";
 
-// styles
+// Styles
 import "./_title.scss";
 
 interface TitleProps {
