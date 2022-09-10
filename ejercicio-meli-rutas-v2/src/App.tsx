@@ -1,7 +1,6 @@
 import { Routes, Route } from "react-router";
 
 // Components
-import Title from "./components/Title/Title";
 import Layout from "./templates/Layout";
 
 // Pages
@@ -23,3 +22,7 @@ function App() {
 }
 
 export default App;
+
+// ejercicio
+// a medida que busquen deberian filtrarse los resultados
+// por defecto nos traiga cargando algo, no importa que por el momento

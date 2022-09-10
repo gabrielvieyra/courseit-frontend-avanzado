@@ -1,5 +1,14 @@
+// Components
+import Navbar from "../../components/Navbar/Navbar";
+import Products from "../../components/Products/Products";
+
 const Team: React.FC = () => {
-  return <h1>Team Page</h1>;
+  return (
+    <>
+      <Navbar />
+      <Products />
+    </>
+  );
 };
 
 export default Team;
