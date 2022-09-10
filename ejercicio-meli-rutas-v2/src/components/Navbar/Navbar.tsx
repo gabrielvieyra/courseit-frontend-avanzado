@@ -1,13 +1,18 @@
-// Components
-import Title from "../Title/Title";
-
 // Styles
 import "./_navbar.scss";
 
-const Navbar: React.FC = () => {
+interface NavbarProps {
+  handleSearch: (value: string) => void;
+}
+
+const Navbar: React.FC<NavbarProps> = ({ handleSearch }) => {
+  function handleChange(e: React.ChangeEvent<HTMLInputElement>): void {
+    handleSearch(e.target.value);
+  }
+
   return (
     <nav className="navbar">
-      <input type="text" />
+      <input type="text" onChange={handleChange} />
     </nav>
   );
 };

@@ -10,7 +10,11 @@ interface Product {
   id: number;
 }
 
-const Products: React.FC = () => {
+interface ProductsProps {
+  inputValue: string;
+}
+
+const Products: React.FC<ProductsProps> = ({ inputValue }) => {
   const [products, setProducts] = useState<Array<Product>>([]);
 
   useEffect(() => {
@@ -19,21 +23,28 @@ const Products: React.FC = () => {
 
   async function getData(): Promise<void> {
     const getData = await fetch(
-      "https://api.mercadolibre.com/sites/MLA/search?q=auriculares&limit=5"
+      "https://api.mercadolibre.com/sites/MLA/search?q=auriculares&limit=10"
     );
     const getJson = await getData.json();
     // console.log(getJson.results);
     setProducts(getJson.results);
   }
 
-  // console.log(products);
+  // console.log(inputValue);
   return (
     <>
       <Title text="Products" />
-      {products.map((product, key) => {
-        const { title, thumbnail, id } = product;
-        return <Product key={id ? id : key} title={title} image={thumbnail} />;
-      })}
+      {products
+        .filter((product) => {
+          const { title } = product;
+          return title.toLowerCase().includes(inputValue.toLowerCase());
+        })
+        .map((product, key) => {
+          const { title, thumbnail, id } = product;
+          return (
+            <Product key={id ? id : key} title={title} image={thumbnail} />
+          );
+        })}
     </>
   );
 };
