@@ -1,11 +1,11 @@
-import { Routes, Route } from "react-router";
+import { Routes, Route } from "react-router-dom";
 
 // Components
 import Layout from "./templates/Layout";
 
 // Pages
 import Home from "./pages/Home/Home";
-import Team from "./pages/Team/Team";
+import Search from "./pages/Search/Search";
 
 // Styles
 import "./App.scss";
@@ -15,7 +15,7 @@ function App() {
     <Layout>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/team" element={<Team />} />
+        <Route path="/search" element={<Search />} />
       </Routes>
     </Layout>
   );

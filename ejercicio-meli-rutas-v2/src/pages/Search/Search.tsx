@@ -4,7 +4,7 @@ import { useState } from "react";
 import Navbar from "../../components/Navbar/Navbar";
 import Products from "../../components/Products/Products";
 
-const Team: React.FC = () => {
+const Search: React.FC = () => {
   const [inputValue, setInputValue] = useState<string>("");
 
   function handleSearch(value: string): void {
@@ -19,4 +19,4 @@ const Team: React.FC = () => {
   );
 };
 
-export default Team;
+export default Search;

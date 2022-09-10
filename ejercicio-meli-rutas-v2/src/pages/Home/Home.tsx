@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 // Styles
 import "./_home.scss";
 
@@ -16,9 +18,17 @@ const Home: React.FC = () => {
 
   return (
     <div className="home">
-      {countries.map((country, key) => {
-        return <a key={key}>{country}</a>;
-      })}
+      <ul>
+        {countries.map((country, key) => {
+          return (
+            <li>
+              <Link to="/search" key={key}>
+                {country}
+              </Link>
+            </li>
+          );
+        })}
+      </ul>
     </div>
   );
 };
