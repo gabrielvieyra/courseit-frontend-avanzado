@@ -2,7 +2,21 @@
 
 /* Variables */
 
+// Fonts
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;700&display=swap");
+$main-font: "Public Sans", sans-serif;
+
+// Font-size
+$font-size-xs: 0.75rem; //12px
+$font-size-sm: 0.875rem; //14px
+$font-size-md: 1rem; //16px
+$font-size-lg: 2rem; //32px
+
+// Font-weight
+$font-weight-medium: 500; //medium
+$font-weight-bold: 700; //bold
+
 // Colors
 $black: #333;
 $yellow: #fff159;
-$lightGrey: #ebebeb;
+$light-grey: #ebebeb;
