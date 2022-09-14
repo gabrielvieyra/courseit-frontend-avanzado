@@ -21,10 +21,8 @@ const Home: React.FC = () => {
       <ul>
         {countries.map((country, key) => {
           return (
-            <li>
-              <Link to="/search" key={key}>
-                {country}
-              </Link>
+            <li key={key}>
+              <Link to="/search">{country}</Link>
             </li>
           );
         })}
