@@ -12,9 +12,10 @@ interface Product {
 
 interface ProductsProps {
   inputValue: string;
+  site: string;
 }
 
-const Products: React.FC<ProductsProps> = ({ inputValue }) => {
+const Products: React.FC<ProductsProps> = ({ inputValue, site }) => {
   const [products, setProducts] = useState<Array<Product>>([]);
 
   useEffect(() => {
@@ -23,14 +24,13 @@ const Products: React.FC<ProductsProps> = ({ inputValue }) => {
 
   async function getData(): Promise<void> {
     const getData = await fetch(
-      "https://api.mercadolibre.com/sites/MLA/search?q=auriculares&limit=10"
+      `https://api.mercadolibre.com/sites/${site}/search?q=auriculares&limit=10`
     );
     const getJson = await getData.json();
     // console.log(getJson.results);
     setProducts(getJson.results);
   }
 
-  // console.log(inputValue);
   return (
     <>
       <Title text="Products" />

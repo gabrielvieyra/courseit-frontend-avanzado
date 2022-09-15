@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Routes, Route, useParams } from "react-router-dom";
 
 // Components
@@ -13,10 +14,19 @@ const ProductExample: React.FC = () => {
   // console.log(id);
 
   // leemos el id de la url y le pegamos al endpoint de meli correspondiente
-  // logica
+  async function getData(): Promise<void> {
+    const getData = await fetch(`https://api.mercadolibre.com/items/${id}`);
+    const getJson = await getData.json();
+    console.log(getJson);
+  }
+
+  useEffect(() => {
+    getData();
+  }, []);
+
   return (
     <>
-      <h1>Soy un producto = {id}</h1>
+      <h1>Soy el producto Nro: {id}</h1>
       {/* <Routes>
         <Route path="/:productId" element={<ProductDetail />} />
       </Routes> */}

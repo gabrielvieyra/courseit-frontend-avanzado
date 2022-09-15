@@ -17,7 +17,7 @@ function App() {
     <Layout>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/search" element={<Search />} />
+        <Route path="/search/:id" element={<Search />} />
         {/* con /* (barra asteristo) lo que hacemos es habilitar a tener nuevas rutas adentro de esta ruta, es decir tener subrutas */}
         <Route path="/products/*" element={<ProductExample />} />
         {/* la libreria react-router-dom nos va a pasar por props la informacion de nuestra ruta
