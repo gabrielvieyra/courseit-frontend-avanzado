@@ -24,7 +24,7 @@ const Products: React.FC<ProductsProps> = ({ inputValue, site }) => {
 
   async function getData(): Promise<void> {
     const getData = await fetch(
-      `https://api.mercadolibre.com/sites/${site}/search?q=auriculares&limit=10`
+      `https://api.mercadolibre.com/sites/${site}/search?q=auriculares&limit=5`
     );
     const getJson = await getData.json();
     // console.log(getJson.results);
@@ -42,7 +42,12 @@ const Products: React.FC<ProductsProps> = ({ inputValue, site }) => {
         .map((product, key) => {
           const { title, thumbnail, id } = product;
           return (
-            <Product key={id ? id : key} title={title} image={thumbnail} />
+            <Product
+              key={id ? id : key}
+              title={title}
+              image={thumbnail}
+              productId={id}
+            />
           );
         })}
     </>
