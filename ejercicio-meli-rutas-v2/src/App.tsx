@@ -8,6 +8,7 @@ import ProductDetail from "./components/ProductDetail/ProductDetail";
 import Home from "./pages/Home/Home";
 import Search from "./pages/Search/Search";
 import ProductExample from "./pages/ProductExample/ProductExample";
+import SearchResult from "./pages/SearchResults/SearchResults";
 
 // Styles
 import "./App.scss";
@@ -21,6 +22,7 @@ function App() {
         {/* voy a mostrar un listado de productos y cuando le de click a un producto voy a ver el producto en detalle */}
         <Route path="/search/:id" element={<Search />} />
         <Route path="/search/:id/:productId" element={<ProductDetail />} />
+        <Route path="/search02/:site" element={<SearchResult />} />
         {/* con /* (barra asteristo) lo que hacemos es habilitar a tener nuevas rutas adentro de esta ruta, es decir tener subrutas */}
         <Route path="/products/*" element={<ProductExample />} />
         {/* la libreria react-router-dom nos va a pasar por props la informacion de nuestra ruta

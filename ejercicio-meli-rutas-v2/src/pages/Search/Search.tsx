@@ -18,7 +18,7 @@ const Search: React.FC = () => {
   // console.log(id, "sitie");
   return (
     <>
-      <Navbar handleSearch={handleSearch} />
+      <Navbar handleSearch={handleSearch} site={id} />
       <Products inputValue={inputValue} site={id!} />
     </>
   );
