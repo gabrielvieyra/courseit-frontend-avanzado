@@ -30,6 +30,8 @@ const Navbar: React.FC<NavbarProps> = ({ handleSearch, site }) => {
   }
 
   return (
+    // TODO: agregar menu mobile
+    // podriamos reutilizar el componente ej si estoy en mobile lo muestro de una manera y si estoy en desktop o tablet lo muestro de otra manera
     <nav className="navbar">
       <form onSubmit={handleSubmit}>
         <input
