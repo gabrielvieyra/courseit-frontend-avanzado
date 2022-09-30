@@ -6,12 +6,15 @@ import { ThemeContext } from '../../context/ThemeContext';
 // Styles
 import './_button.scss';
 
-interface ButtonProps {
-  handleTheme: () => void;
-}
+const Button: React.FC = () => {
+  const { theme, setTheme } = useContext(ThemeContext);
 
-const Button: React.FC<ButtonProps> = ({ handleTheme }) => {
-  const theme = useContext(ThemeContext);
+  function handleTheme(): void {
+    // console.log(theme, 'theme');
+    // console.log(setTheme, 'setTheme');
+    const newTheme = theme === 'light' ? 'dark' : 'light';
+    setTheme(newTheme);
+  }
 
   return (
     <button className={`button ${theme}`} onClick={() => handleTheme()}>
