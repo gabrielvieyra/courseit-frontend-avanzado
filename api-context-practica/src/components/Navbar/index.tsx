@@ -1,14 +1,18 @@
+import { useContext } from 'react';
+
+// Context
+import { UserContext } from '../../context/UserContext';
+
 // Styles
 import './styles.scss';
 
-interface NavbarProps {
-  name: string;
-}
+const Navbar: React.FC = () => {
+  const { info } = useContext(UserContext);
+  // console.log(user);
 
-const Navbar: React.FC<NavbarProps> = ({ name }) => {
   return (
     <nav className='navbar'>
-      <h1 className='navbar__title'>{name}</h1>
+      <h1 className='navbar__title'>{info.name}</h1>
     </nav>
   );
 };

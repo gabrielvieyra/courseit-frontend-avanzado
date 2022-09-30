@@ -1,9 +1,12 @@
-interface ParagraphProps {
-  bio: string;
-}
+import { useContext } from 'react';
 
-const Paragraph: React.FC<ParagraphProps> = ({ bio }) => {
-  return <p>{bio}</p>;
+// Context
+import { UserContext } from '../../context/UserContext';
+
+const Paragraph: React.FC = () => {
+  const { info } = useContext(UserContext);
+
+  return <p>{info.bio}</p>;
 };
 
 export default Paragraph;

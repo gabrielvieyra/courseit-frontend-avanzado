@@ -1,9 +1,13 @@
-interface AvatarProps {
-  src: string;
-}
+import { useContext } from 'react';
 
-const avatar: React.FC<AvatarProps> = ({ src }) => {
-  return <img src={src} alt='avatar' />;
+// Context
+import { UserContext } from '../../context/UserContext';
+
+const avatar: React.FC = () => {
+  const { info } = useContext(UserContext);
+  // console.log(user);
+
+  return <img src={info.avatar_url} alt='avatar' />;
 };
 
 export default avatar;

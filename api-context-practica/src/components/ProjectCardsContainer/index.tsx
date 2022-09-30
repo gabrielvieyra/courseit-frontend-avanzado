@@ -1,21 +1,18 @@
+import { useContext } from 'react';
+
+// Context
+import { UserContext } from '../../context/UserContext';
+
 // Components
 import ProjectCard from '../ProjectCard';
 
-// Interfaces
-import { Project } from '../../types/types';
-
-interface ProjectCardsContainerProps {
-  projects: Array<Project>;
-}
-
-const ProjectCardsContainer: React.FC<ProjectCardsContainerProps> = ({
-  projects,
-}) => {
-  //   console.log(projects, 'projects');
+const ProjectCardsContainer: React.FC = () => {
+  const { repos } = useContext(UserContext);
+  // console.log(repos);
   return (
     <>
       <h1>Projects</h1>
-      {projects.map((project, index) => {
+      {repos.map((project, index) => {
         const { name, id, stargazers_count } = project;
         return (
           <ProjectCard
