@@ -1,0 +1,50 @@
+[
+  {
+    "name": "CourseIT",
+    "imagen": "https://courseit.io/static/logo.png",
+    "description": "Aprende programación 100% online",
+    "id": 1
+  },
+  {
+    "name": "LEMON",
+    "imagen": "https://www.lemon.me/images/logos/lemon-header.svg",
+    "description": "Cambiá tus pesos por Bitcoin, Ethereum, USDT y más cryptos en un minuto. Sumate al futuro del dinero y de internet con Lemon Cash app",
+    "id": 2
+  },
+  {
+    "name": "Filadd",
+    "imagen": "https://static.filadd.com/new-identity/logo/filadd_positive.svg",
+    "description": "Encontrá apuntes, exámenes y cursos virtuales de tu carrera",
+    "id": 3
+  },
+  {
+    "name": "Alkemy",
+    "imagen": "https://www.alkemy.org/static/media/alkemyLogo.2daef856.svg",
+    "description": "Conectamos a las empresas y al mejor talento Tech de LATAM",
+    "id": 4
+  },
+  {
+    "name": "Nulinga",
+    "imagen": "https://d2y1he8mgnokpm.cloudfront.net/static/marketing/landings/images/es_AR/nulinga-logo-violeta.svg",
+    "description": "The online language learning platform designed for the corporate world.",
+    "id": 5
+  },
+  {
+    "name": "Uala",
+    "imagen": "https://www.uala.com.ar/_next/static/media/uala-logo.0f40a352.png",
+    "description": "El lado bueno de tu plata",
+    "id": 6
+  },
+  {
+    "name": "Technicys",
+    "imagen": "https://www.technisys.com/wp-content/themes/technisys/img/technisys-navbar-logo-horizontal.svg",
+    "description": "Diferénciese y Gane con nuestra Plataforma de Banca Digital",
+    "id": 7
+  },
+  {
+    "name": "Cliengo",
+    "imagen": "https://lirp.cdn-website.com/241eff5b/dms3rep/multi/opt/Logo-212w.png",
+    "description": "Convertimos las visitas de tu sitio en clientes ",
+    "id": 8
+  }
+]
