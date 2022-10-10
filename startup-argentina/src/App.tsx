@@ -28,8 +28,5 @@ export default App;
 // cuando le damos al btn enviar tenemos que hacer la validacion de que todos los campos obligatorios salvo web, twitter y instagram tengan algo escrito
 // y no esten vacios, si las validaciones se cumplen lo tiene que agregar al localStorage, sino nos tiene que mostrar un mensaje de error general o individual
 
-// TIPS:
+// TIP:
 // usar 2 custom hooks, uno para el localStorage y el otro para validar los campos requeridos y los nos requeridos
-// logica para los inputs vacios o completos se van a reutilizar en muchos lados
-
-// la longitud ej es > a 0

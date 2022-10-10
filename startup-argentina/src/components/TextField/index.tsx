@@ -8,18 +8,21 @@ interface TextFieldProps {
   type: string;
   label?: string;
   placeholder: string;
-  handleValue: (inputValue: string) => void;
+  name: string;
+  handleInputs: (inputValue: string, name: string) => void;
 }
 
-const TextField: FC<TextFieldProps> = ({ type, label, placeholder, handleValue }) => {
+const TextField: FC<TextFieldProps> = ({ type, label, placeholder, name, handleInputs }) => {
   function handleChange(e: React.ChangeEvent<HTMLInputElement>): void {
-    handleValue(e.target.value);
+    const { value, name } = e.target;
+    // console.log(name);
+    handleInputs(value, name);
   }
 
   return (
     <div className='textField'>
       {label && <label>{label}:</label>}
-      <input type={type} placeholder={placeholder} onChange={handleChange} />
+      <input type={type} placeholder={placeholder} name={name} onChange={handleChange} />
     </div>
   );
 };
