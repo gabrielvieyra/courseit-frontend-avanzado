@@ -1,8 +1,14 @@
-import { FC, useState } from 'react';
+import { FC, useState, useEffect } from 'react';
 
 // Components
 import Navbar from '../../components/Navbar';
 import StartupCardsContainer from '../../components/StartupCardsContainer';
+
+// Interfaces
+import { Startup } from '../../types/types';
+
+// Custom hooks
+import { useLocalStorage } from '../../hooks/useLocalStorage';
 
 const Home: FC = () => {
   // Ejercicio: quiero tener un input y 3 botones, uno que diga guardar informacion, otro que diga leer informacion y el ultimo que diga
@@ -10,6 +16,8 @@ const Home: FC = () => {
 
   const [inputValue, setInputValue] = useState<string>('');
   const [localStorageValue, setLocalStorageValue] = useState<string>('');
+
+  const [parseStartups] = useLocalStorage();
 
   function saveInformationToLocalStorage(): void {
     localStorage.setItem('inputValue', inputValue);
@@ -34,6 +42,11 @@ const Home: FC = () => {
         <button onClick={getInformationFromLocalStorage}>Leer informacion</button>
         <button onClick={deleteInformationFromLocalStorage}>Borrar informacion</button>
         <p>El valor de localStorage es: {localStorageValue}</p>
+      </div>
+      <div>
+        {parseStartups.map((startup, index) => {
+          return <div key={index}>{startup.name}</div>;
+        })}
       </div>
     </>
   );

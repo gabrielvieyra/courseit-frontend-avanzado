@@ -17,5 +17,7 @@ export const usePassword = (
 
   // Lo que te devuelve este custom hook es una tupla, esto es muy parecido al getter y al setter del useState, en el primer lugar siempre te devuelve el resultado
   // que vos vas a querer leer y en el segundo lugar va el valor que vos le queres mandar, ej en este caso vos le vas a decir que input queres escuchar
+  // Cuando retornamos algo en un array generalmente lo hacemos por que queremos que sea un getter y un setter como lo es en este caso, pero si no queremos esto
+  // o vamos a retornar muchas cosas podemos retornar un objeto
   return [isValid, handleChange];
 };

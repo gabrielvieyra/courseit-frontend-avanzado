@@ -8,13 +8,17 @@ import Search from '../Search';
 // Styles
 import './styles.scss';
 
-const Navbar: FC = () => {
+interface NavbarProps {
+  showInput?: boolean;
+}
+
+const Navbar: FC<NavbarProps> = ({ showInput = true }) => {
   return (
     <nav className='navbar'>
       <Link to='/'>
         <h2>Startup Argentina</h2>
       </Link>
-      <Search />
+      {showInput && <Search />}
       <Link to='/add'>Agregar startup</Link>
     </nav>
   );
